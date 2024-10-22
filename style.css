@@ -1,0 +1,793 @@
+@import url("https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400..700;1,400..700&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: snow;
+  font-family: "Lora", serif;
+  width: 100vw;
+  color: rgb(54, 69, 79);
+  word-wrap: break-word;
+  hyphens: auto;
+  user-select: none;
+}
+
+body.no-overflow {
+  overflow: hidden;
+}
+
+a {
+  text-decoration: none;
+  color: currentColor;
+}
+
+.img-icon-hamburger,
+.img-icon-close-mittagskarte,
+.img-icon-close-empfehlungen,
+.img-icon-close-impressum,
+.img-icon-close-datenschutz {
+  top: 0;
+  right: 0;
+}
+
+.img-icon-telefon,
+.img-icon-hamburger,
+.img-icon-close-mittagskarte,
+.img-icon-close-empfehlungen,
+.img-icon-close-impressum,
+.img-icon-close-datenschutz {
+  width: 50px;
+  max-width: 50px;
+  height: 50px;
+  cursor: pointer;
+  position: fixed;
+  margin: 20px;
+  align-items: center;
+}
+
+.img-icon-hamburger,
+.img-icon-close-mittagskarte,
+.img-icon-close-empfehlungen,
+.img-icon-close-impressum,
+.img-icon-close-datenschutz {
+  z-index: 10000;
+}
+
+.img-icon-telefon {
+  left: 0;
+  z-index: 1000000;
+}
+
+.nav-main-nav,
+.section-startseite,
+.section-speisekarte {
+  height: 100vh;
+  min-height: 100vh;
+  max-height: 100vh;
+}
+
+.ul-allergene {
+  font-size: smaller;
+  list-style: none;
+  margin: 0 auto;
+  padding: 0 50px 0;
+}
+
+.ul-allergene li {
+  display: inline;
+  padding-right: 7.5px;
+}
+
+.ul-allergene strong {
+  padding-right: 2.5px;
+}
+
+.ul-zusatzstoffe {
+  font-size: smaller;
+  list-style: none;
+  margin: 0 auto;
+  padding: 5px 50px;
+}
+
+.ul-zusatzstoffe li {
+  display: inline;
+  padding-right: 7.5px;
+}
+
+.ul-zusatzstoffe strong {
+  color: #9b3430;
+  padding-right: 2.5px;
+}
+
+.ul-allergene li:first-of-type,
+.ul-zusatzstoffe li:first-of-type {
+  margin-top: 10px;
+  font-size: medium;
+}
+
+.nav-main-nav {
+  position: fixed;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-color: snow;
+  background-image: url("img/gingham_pattern_checkered_tablecloth.svg");
+  background-size: 67px;
+  background-position: -10% -25.125%;
+  right: 0;
+  transition: right 0.4s;
+  width: 100vw;
+  height: 100vh;
+  top: 0;
+  bottom: 0;
+  z-index: 1000;
+}
+
+.nav-main-nav.hide {
+  right: -120vw;
+}
+
+.nav-main-nav,
+.img-pantomima {
+  box-shadow: 0 0 15px rgba(54, 69, 79, 0.75);
+}
+
+.div-logo-pantomima {
+  height: fit-content;
+  align-items: center;
+  justify-content: center;
+}
+
+.ul-hauptnavigation-links {
+  height: fit-content;
+  width: fit-content;
+  padding-top: 30px;
+}
+
+.li-hauptnavigation-link,
+.li-hauptnavigation-img,
+.li-speisekarte-seite,
+.li-speisekarte-nav-item,
+.li-impressum-datenschutz-link {
+  list-style-type: none;
+}
+
+.li-speisekarte-seite {
+  font-size: larger;
+  padding-bottom: 2px;
+  margin-bottom: 2px;
+  font-weight: 400;
+}
+
+.li-hauptnavigation-link,
+.li-hauptnavigation-img {
+  padding: 0 30px 20px;
+}
+
+.li-speisekarte-nav-item {
+  text-align: center;
+}
+
+.span-speisekarte-seite-nummer {
+  display: inline-block;
+  width: 40px;
+  font-weight: 900;
+  font-size: x-large;
+}
+
+.li-speisekarte-nav-item.page-details {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.li-impressum-datenschutz-link {
+  padding-top: 20px;
+}
+
+.img-nav-link {
+  height: 20px;
+  width: 100%;
+  margin: 0 auto;
+}
+
+.img-nav-link.logo {
+  height: 75px;
+  width: auto;
+}
+
+.li-hauptnavigation-link.logo {
+  display: grid;
+  place-content: center;
+}
+
+.li-hauptnavigation-link.startseite {
+  display: none;
+}
+
+.section-startseite {
+  background-image: url("img/marble-paper.svg");
+}
+
+.section-hauptseite {
+  padding-top: 100px;
+  padding-bottom: 20px;
+}
+
+.nav-hauptnavigation-links {
+  background-color: snow;
+  background-image: url("img/marble-paper.svg");
+  border: 0.5px solid rgba(54, 69, 79, 0.75);
+  box-shadow: 0 0 15px rgba(54, 69, 79, 0.75);
+}
+
+.nav-hauptnavigation-links.hide {
+  right: -120vw;
+}
+
+.section-speisekarte {
+  padding-top: 100px;
+}
+
+.section-speisekarte {
+  display: grid;
+  place-content: start center;
+}
+
+.section-speisekarte.toStopGeneratedTextShowing {
+  visibility: hidden;
+}
+
+.nav-speisekarte-inhalt-2-nav {
+  width: 100vw;
+  height: fit-content;
+  display: grid;
+  place-content: start center;
+  padding-bottom: 50px;
+  z-index: 100;
+  margin: 0 auto;
+}
+
+.section-hauptseite {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+  height: 100%;
+}
+
+.div-sub-logo,
+.ul-impressum-datenschutz {
+  display: flex;
+  align-items: center;
+}
+
+.ul-impressum-datenschutz {
+  flex-direction: column;
+}
+
+.div-sub-logo {
+  flex-direction: row;
+  justify-content: space-around;
+}
+
+.img-latino-logo {
+  width: 250px;
+  height: auto;
+}
+
+.article-opening-parking {
+  width: 250px;
+  height: fit-content;
+  padding: 10px;
+  text-align: center;
+  font-weight: 400;
+  background-color: rgba(255, 255, 255, 0.5);
+  word-break: unset;
+  hyphens: none;
+}
+
+.img-ristorante,
+.img-pizzeria {
+  height: 15px;
+}
+
+.img-impressum,
+.img-datenschutz {
+  height: 20px;
+  width: auto;
+}
+
+.img-pantomima {
+  height: auto;
+  width: 250px;
+  margin: 20px 0;
+}
+
+.div-img-pantomima {
+  display: grid;
+  place-content: center;
+}
+
+.section-speisekarte-seite.hide,
+.nav-speisekarte-inhalt-2-nav.hide,
+.nav-speisekarte-seite-1-nav.hide {
+  display: none;
+}
+
+.ul-speisekarte-nav-buttons {
+  display: flex;
+  flex-direction: row;
+  width: 100vw;
+  justify-content: center;
+  padding-bottom: 30px;
+  font-size: larger;
+}
+
+.spain-seite-nummer {
+  width: 100px;
+}
+
+.li-speisekarte-nav-vor,
+.li-speisekarte-nav-zurueck,
+.ul-speisekarte-seitenå {
+  cursor: pointer;
+}
+
+.li-speisekarte-nav-vor,
+.li-speisekarte-nav-zurueck {
+  display: inline-block;
+  padding: 5px;
+}
+
+.section-speisekarte-seite {
+  width: 90%;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+}
+
+.article-gericht {
+  display: flex;
+  flex-direction: row;
+  padding-bottom: 5px;
+  margin-bottom: 5px;
+}
+
+.article-gericht:nth-child(even),
+.li-speisekarte-seite:nth-child(even) {
+  background-color: rgba(0, 0, 0, 0.05);
+}
+
+.div-gericht-name-beschreibung-fussnoten {
+  display: flex;
+  flex-direction: column;
+  flex-grow: 1;
+}
+
+.h5-gericht-name {
+  font-size: large;
+}
+
+.div-gericht-name-beschreibung {
+  width: 35vw;
+}
+
+.aside-gericht-nummer,
+.strong-gericht-preis,
+.sup-gericht-fussnoten,
+.aside-gericht-grosse {
+  align-self: center;
+  padding: 10px;
+  text-align: center;
+}
+
+.aside-gericht-nummer,
+.strong-gericht-preis,
+.sup-gericht-fussnoten {
+  width: 15vw;
+}
+
+.strong-gericht-preis {
+  font-size: large;
+}
+
+.aside-gericht-grosse {
+  width: 20vw;
+}
+
+.aside-gericht-nummer {
+  font-weight: 400;
+  opacity: 0.6;
+  font-size: medium;
+}
+
+.aside-gericht-preis {
+  font-weight: 900;
+}
+
+.sup-gericht-fussnoten {
+  padding-left: 5px;
+  font-size: medium;
+  font-weight: 400;
+}
+
+.p-gericht-beschreibung {
+  font-weight: 400;
+}
+
+.aside-gericht-grosse {
+  font-size: larger;
+  font-weight: 800;
+  width: 15vw;
+}
+
+.aside-gericht-grosse {
+  opacity: 0.8;
+  font-size: smaller;
+}
+
+.span-speisekarte-seite-gesamtseitenzahl-slash,
+.span-speisekarte-gesamtseitenzahl {
+  opacity: 0.6;
+  font-size: smaller;
+}
+
+.h2-speisekarte {
+  padding-bottom: 10px;
+}
+
+.h2-speisekarte,
+.h2-impressum,
+.h2-datenschutz,
+.strong-zusatzstoffe-allergene {
+  color: #9b3430;
+  margin: 0 auto;
+}
+
+.strong-zusatzstoffe-allergene {
+  padding-bottom: 5px;
+}
+
+.h2-impressum,
+.h2-datenschutz {
+  padding-bottom: 50px;
+}
+
+.h3-speisekarte-seite-heading {
+  color: #9b3430;
+  padding-bottom: 10px;
+  font-weight: 800;
+  font-size: x-large;
+  margin: 0 auto;
+}
+
+.h2-empfehlungen {
+  text-align: center;
+}
+
+.h2-empfehlungen,
+.h2-mittagskarte {
+  color: black;
+}
+
+.h2-mittagskarte {
+  margin-top: 150px;
+}
+
+.p-speisekarte-seite-details {
+  font-weight: 400;
+  font-size: medium;
+  padding-bottom: 15px;
+}
+
+.h4-gericht-gruppe {
+  padding: 20px;
+  color: #9b3430;
+  font-weight: 800;
+  font-size: larger;
+}
+
+.strong-speisekarte-seite-fussnoten {
+  padding: 30px 0;
+  font-weight: 400;
+  font-size: medium;
+}
+
+/*
+
+.wahlweise {
+  text-decoration: underline;
+}
+
+@media (max-width: 991px) {
+  body {
+    font-size: small;
+  }
+  #header {
+    padding-top: 60px;
+  }
+  .unsere {
+    display: none;
+  }
+  .sub-logo.hide {
+    display: none;
+  }
+  .opening-parking {
+    font-size: small;
+  }
+  .preis {
+    font-size: medium;
+  }
+  .opening-parking {
+    display: none;
+  }
+  .main-nav {
+    background-size: 33vw;
+    background-position: -10%;
+  }
+}
+
+... also download font
+
+*/
+
+/* ... MITTAGSKARTE ... */
+
+.article-mittagskarte {
+  display: none;
+  flex-direction: row-reverse;
+  justify-content: space-evenly;
+  position: fixed;
+  z-index: 100000;
+  left: 0;
+  right: 0;
+  width: 100%;
+  height: 100%;
+  overflow: auto;
+  font-size: larger;
+  font-weight: 600;
+  text-align: center;
+  background-color: snow;
+  background-image: url("img/stamp.svg");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: 65vw;
+  font-size: larger;
+  font-weight: 600;
+  padding: 100px 50px 50px;
+}
+
+.img-nav-link.mittagskarte {
+  cursor: pointer;
+}
+.img-nav-link.img-empfehlungen,
+.img-impressum,
+.img-datenschutz {
+  cursor: pointer;
+}
+
+.img-icon-close-mittagskarte {
+  cursor: pointer;
+}
+
+/* ... EMPFEHLUNGEN ... */
+
+.article-empfehlungen {
+  display: none;
+  place-content: center;
+  position: fixed;
+  z-index: 1000000;
+  left: 0;
+  right: 0;
+  width: 100vw;
+  height: 100vh;
+  overflow: auto;
+  background-color: snow;
+  background-image: url("img/stamp.svg");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: 65vw;
+  font-size: larger;
+  font-weight: 600;
+  padding: 50px 50px;
+}
+
+.strong-gericht-preis-empfehlungen {
+  display: block;
+  margin: 0 auto;
+  width: 100%;
+  padding-bottom: 20px;
+}
+
+.img-logo-oysters {
+  margin: 25px 0;
+  width: 150px;
+  height: auto;
+  filter: grayscale(100%);
+}
+
+.img-nav-link.empfehlungen {
+  cursor: pointer;
+}
+
+.img-icon-close-empfehlungen {
+  cursor: pointer;
+}
+
+.div-empfehlungen-right,
+.logo-empfehlungen {
+  display: grid;
+  place-content: center;
+}
+
+.div-empfehlungen-left {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  align-items: center;
+}
+
+.div-gericht-empfehlungen {
+  display: grid;
+  place-items: center;
+}
+
+/* ... impressum ... */
+
+.article-impressum {
+  display: none;
+  position: fixed;
+  z-index: 100000;
+  left: 0;
+  right: 0;
+  width: 100%;
+  height: 100%;
+  overflow: auto;
+  font-size: large;
+  font-weight: 400;
+  padding: 150px 70px;
+  text-align: start;
+  background: #201215;
+  color: #ccc;
+}
+
+.article-impressum b,
+.article-datenschutz b {
+  color: #aaa;
+}
+
+.article-impressum ul,
+.article-datenschutz ul {
+  padding-left: 20px;
+}
+
+.img-nav-link.impressum {
+  cursor: pointer;
+}
+
+.img-icon-close-impressum {
+  cursor: pointer;
+}
+
+/* ... datenschutz ... */
+
+.article-datenschutz {
+  display: none;
+  position: fixed;
+  z-index: 100000;
+  left: 0;
+  right: 0;
+  width: 100%;
+  height: 100%;
+  overflow: auto;
+  font-size: larger;
+  font-weight: 600;
+  padding: 150px 50px;
+  background: #201215;
+  color: #ccc;
+}
+
+.img-nav-link.datenschutz {
+  cursor: pointer;
+}
+
+.img-icon-close-datenschutz {
+  cursor: pointer;
+}
+
+/* ... ... ... */
+
+@media only screen and (max-width: 991px) and (orientation: landscape) {
+  .section-speisekarte {
+    background-size: 40vw;
+    background-position: 50% 70%;
+  }
+  .section-hauptseite {
+    flex-direction: row;
+    width: 80vw;
+    margin: 0 auto;
+    padding-top: 10px;
+  }
+  .div-logo-pantomima {
+    height: fit-content;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+  }
+  .div-sub-logo {
+    justify-content: center;
+  }
+  .li-hauptnavigation-link.logo {
+    display: none;
+  }
+  .li-hauptnavigation-link.startseite {
+    display: block;
+  }
+  .img-pantomima {
+    margin: 30px 0 0 0;
+    height: auto;
+    width: 200px;
+  }
+  .article-opening-parking {
+    font-size: large;
+    margin: 0 auto;
+  }
+  .span-sa-so-separator-mobile-landscape {
+    display: inline;
+  }
+  .span-sa-so-separator-desktop {
+    display: none;
+  }
+  .div-img-pantomima {
+    padding: 0 50px;
+  }
+  .nav-main-nav {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    padding: 0 50px;
+  }
+  .section-startseite {
+    padding: 0 50px;
+  }
+  .img-latino-logo {
+    height: 60px;
+  }
+  .img-ristorante {
+    padding-right: 5px;
+  }
+  .ul-speisekarte-seiten {
+    columns: 2;
+  }
+  .section-speisekarte {
+    padding: 75px 0 50px;
+    background-size: 35vw;
+  }
+  .div-empfehlungen-container {
+    display: flex;
+    justify-content: space-around;
+    flex-direction: row;
+  }
+  .article-empfehlungen,
+  .article-mittagskarte {
+    background-position: center;
+    background-size: 45vw;
+  }
+  .article-empfehlungen {
+    padding-top: 100px;
+  }
+  .h2-mittagskarte {
+    margin-top: 0px;
+  }
+  .img-impressum,
+  .img-datenschutz {
+    margin-left: 25px;
+  }
+}
